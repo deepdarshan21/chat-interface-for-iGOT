@@ -14,23 +14,27 @@ function App() {
 
   useEffect(() => {
     if (chatElementRef.current) {
-      chatElementRef.current.messageStyles = {
-        html: {
-          shared: {
-            bubble: {
-              backgroundColor: "unset",
-              padding: "0px",
-              width: "100%",
-              textAlign: "right",
-            },
-          },
-        },
-      };
+      // chatElementRef.current.messageStyles = {
+      //   html: {
+      //     shared: {
+      //       bubble: {
+      //         backgroundColor: "unset",
+      //         padding: "0px",
+      //         width: "100%",
+      //         textAlign: "right",
+      //       },
+      //     },
+      //   },
+      // };
       chatElementRef.current.submitButtonStyles = {
         disabled: { container: { default: { opacity: 0, cursor: "auto" } } },
       };
       chatElementRef.current.onNewMessage = ({ message, isInitial }) => {
-        if (!isInitial && message.role === "ai") {
+        if (
+          !isInitial &&
+          message.role === "ai" &&
+          message.text !== "Thanks recorded!"
+        ) {
           console.log("in ref : ", isInitial, message);
           // chatElementRef.current.responseInterceptor = (message) => {
           //   return message;
@@ -39,7 +43,7 @@ function App() {
           //   return { role: "ai", text: "feedback" };
           // };
           chatElementRef.current._addMessage({
-            text: "Feedback dummy text",
+            text: "Was the response satisfactory?",
             role: "ai",
           });
           chatElementRef.current._addMessage({
@@ -73,7 +77,7 @@ function App() {
           zIndex: 1, // Ensure it's above other content
         }}
         request={{
-          url: "http://127.0.0.1:5000/chat",
+          url: "http://127.0.0.1:5000/api/chat",
           method: "POST",
         }}
         // textToSpeech="true"
