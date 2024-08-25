@@ -6,3 +6,21 @@ Question - looking for courses with some maths
 Response - [{'name': 'Data Science Math Skills', 'url': 'https://www.coursera.org/learn/datasciencemathskills'}, {'name': 'Precalculus: Mathematical Modeling', 'url': 'https://www.coursera.org/learn/precalculus-mathematical-modelling'}, {'name': 'JavaScript Arithmetic Operators', 'url': 'https://www.coursera.org/learn/javascript-arithmetic-operators'}]
 Feedback - No
 
+Question - give some details about course on python data structures
+Response - [{'name': 'Python Data Structures', 'url': 'https://www.coursera.org/learn/python-data'}, {'name': 'Python Data Structures', 'url': 'https://www.coursera.org/learn/python-data-structures'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation'}]
+Feedback - Yes
+
+Question - get courses on advanced data structures
+Response - [{'name': 'Data Structures', 'url': 'https://www.coursera.org/learn/data-structures'}, {'name': 'Unordered Data Structures', 'url': 'https://www.coursera.org/learn/cs-fundamentals-3'}, {'name': 'Advanced Data Structures in Java', 'url': 'https://www.coursera.org/learn/Advanced-data-structures'}]
+Question - can you give some courses regarding learning data structures and python
+Response - [{'name': 'Python Data Structures', 'url': 'https://www.coursera.org/learn/python-data'}, {'name': 'Data Structures', 'url': 'https://www.coursera.org/learn/data-structures'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation'}]
+Feedback - Yes
+
+Question - can you give courses for musicians
+Response - [{'name': 'Developing Your Musicianship: Final Project', 'url': 'https://www.coursera.org/learn/musicianship-final-project'}, {'name': 'Teaching Popular Music in the Classroom', 'url': 'https://www.coursera.org/learn/teaching-popular-music'}, {'name': 'Building Your Career in Music: Developing A Brand and Funding Your Music', 'url': 'https://www.coursera.org/learn/navigate-music-industry-independent-artist'}]
+Feedback - Yes
+
+Question - Can you give some course related details for Java
+Response - [{'name': 'Process Personal Details using Methods in Java', 'url': 'https://www.coursera.org/learn/process-personal-details-using-methods-in-java'}, {'name': 'Build a Guessing Game Application using Java', 'url': 'https://www.coursera.org/learn/build-game-application-using-java'}, {'name': 'Create your first Java project using jGRASP', 'url': 'https://www.coursera.org/learn/create-your-first-java-project-using-jgrasp'}]
+Feedback - No
+
