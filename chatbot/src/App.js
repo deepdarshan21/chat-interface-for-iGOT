@@ -7,8 +7,12 @@ import SmartToyIcon from "@mui/icons-material/SmartToy";
 function App() {
   const [showChat, setShowChat] = useState(false);
   const initialMessages = [
-    { role: "user", text: "Hey, how are you today?" },
-    { role: "ai", text: "I am doing very well!" },
+    // { role: "user", text: "Hey, how are you today?" },
+    { role: "ai", text: "Hey! How can I help you today?" },
+    {
+      role: "ai",
+      html: "<p> Ask me anything related to - <br></p><ul><li>Give me a course related to python</li><li>Provide the summary of the course 'Python Fundamentals'</li><li>Test my knowledge</li><li>Ask anything</li></ul>",
+    },
   ];
   const chatElementRef = useRef(null);
 

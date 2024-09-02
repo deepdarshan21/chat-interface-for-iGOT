@@ -24,3 +24,19 @@ Question - Can you give some course related details for Java
 Response - [{'name': 'Process Personal Details using Methods in Java', 'url': 'https://www.coursera.org/learn/process-personal-details-using-methods-in-java'}, {'name': 'Build a Guessing Game Application using Java', 'url': 'https://www.coursera.org/learn/build-game-application-using-java'}, {'name': 'Create your first Java project using jGRASP', 'url': 'https://www.coursera.org/learn/create-your-first-java-project-using-jgrasp'}]
 Feedback - No
 
+Question - give some course details regarding python
+Response - [{'name': 'Create Your First Python Program', 'url': 'https://www.coursera.org/learn/first-python-program', 'rating': '4.6'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation', 'rating': '4.7'}, {'name': 'Python Programming: A Concise Introduction', 'url': 'https://www.coursera.org/learn/python-programming-introduction', 'rating': '4.6'}]
+Question - give some course details in python
+Response - [{'name': 'Create Your First Python Program', 'url': 'https://www.coursera.org/learn/first-python-program', 'rating': '4.6'}, {'name': 'Python Programming: A Concise Introduction', 'url': 'https://www.coursera.org/learn/python-programming-introduction', 'rating': '4.6'}, {'name': 'Concepts in Python: Loops, Functions and Returns', 'url': 'https://www.coursera.org/learn/python-loops-functions-returns', 'rating': '4.8'}]
+Question - no
+Response - [{'name': 'Marketing in an Analog World', 'url': 'https://www.coursera.org/learn/marketing-analog', 'rating': '4.7'}, {'name': 'Analyze Box Office Data with Plotly and Python', 'url': 'https://www.coursera.org/learn/analyze-data-plotly-python', 'rating': '4.5'}, {'name': 'Native Advertising', 'url': 'https://www.coursera.org/learn/native-advertising', 'rating': '4.4'}]
+Feedback - No
+
+Question - can you give some courses that teach about python fundamentals
+Response - [{'name': 'Python Basics', 'url': 'https://www.coursera.org/learn/python-basics', 'rating': '4.8'}, {'name': 'Python Classes and Inheritance', 'url': 'https://www.coursera.org/learn/python-classes-inheritance', 'rating': '4.7'}, {'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}]
+Question - This is the course title -
+Response - [{'name': 'Our Earth: Its Climate, History, and Processes', 'url': 'https://www.coursera.org/learn/our-earth', 'rating': '4.7'}, {'name': 'Origins - Formation of the Universe, Solar System, Earth and Life', 'url': 'https://www.coursera.org/learn/origins-universe-solarsystem', 'rating': '4.7'}, {'name': 'How To Teach Us', 'url': 'https://www.coursera.org/learn/how-to-teach-us', 'rating': '4.3'}]
+Question - give some courses related to finance and accounting
+Response - [{'name': 'Accounting: Principles of Financial Accounting', 'url': 'https://www.coursera.org/learn/financial-accounting', 'rating': '4.8'}, {'name': 'Management and financial accounting: Know your numbers 1', 'url': 'https://www.coursera.org/learn/management-accounting', 'rating': '4.7'}, {'name': 'Accounting Analysis II: Accounting for Liabilities and Equity', 'url': 'https://www.coursera.org/learn/accounting-analysis-2-equity', 'rating': '4.6'}]
+Feedback - Yes
+

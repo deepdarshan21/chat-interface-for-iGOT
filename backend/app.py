@@ -6,6 +6,11 @@ from utils.chromaQueryDocuments import (
     chroma_init,
     query_documents_local,
 )
+from utils.groqLoader import (
+    groq_chat_intialization,
+    question_categorization,
+    get_course_title,
+)
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -43,41 +48,89 @@ def chat_response():
         }
         return [response_data]
 
-    collection = chroma_init()
-    results = query_documents_local(collection, user_message)
-    courses = []
-    final_resp_text = ""
-    j = 1
-    for i in results:
-        parsed_details = parse_course_details(i[0].page_content)
-        name = parsed_details.get("Course Name", None)
-        url = parsed_details.get("Course URL", None)
-        if not name or not url:
-            continue
-        final_resp_text = (
-            final_resp_text
-            + f"{j}) <b>Course Name</b> - {name}<br><b>Course URL</b> - <a href='{url}' target='_blank'>{url}</a><br><br>"
-        )
-        j += 1
-        courses.append({"name": name, "url": url})
+    category = question_categorization(user_message)
+    print(category)
 
-    if len(courses) != 0:
-        # Sample response data
+    if category == "course_search":
+        collection = chroma_init()
+        results = query_documents_local(collection, user_message, 3)
+        courses = []
+        final_resp_text = ""
+        j = 1
+        for i in results:
+            parsed_details = parse_course_details(i[0].page_content)
+            name = parsed_details.get("Course Name", None)
+            url = parsed_details.get("Course URL", None)
+            rating = parsed_details.get("Course Rating", None)
+            if not name or not url or not rating:
+                continue
+            final_resp_text = (
+                final_resp_text
+                + f"{j}) <b>Course Name</b> - {name}<br><b>Course URL</b> - <a href='{url}' target='_blank'>{url}</a><br> <b>Course Rating</b> - {rating}<br><br>"
+            )
+            j += 1
+            courses.append({"name": name, "url": url, "rating": rating})
+
+        if len(courses) != 0:
+            # Sample response data
+            response_data = {
+                "role": "ai",
+                "html": f"<p>Here are the top 3 courses you should look into - <br></p>{final_resp_text}",
+            }
+
+        else:
+            response_data = {
+                "role": "ai",
+                "text": f"No courses could be found!",
+            }
+
+        app.logger.info(f"Question - {user_message}")
+        app.logger.info(f"Response - {courses}")
+
+        return [response_data]
+    elif category == "course_summary":
+        collection = chroma_init()
+        course_title = get_course_title(user_message)
+        if course_title == "NA":
+            default_current_course = "Anti-Racism I"
+        else:
+            default_current_course = course_title
+
+        # rag based fetching top 1 course that matches this title and thus getting the summary of that course
+        results = query_documents_local(collection, default_current_course, 1)
+        if len(results) == 0:
+            response_data = {
+                "role": "ai",
+                "text": f"No courses could be found!",
+            }
+        else:
+            parsed_details = parse_course_details(results[0][0].page_content)
+            name = parsed_details.get("Course Name", None)
+            description = parsed_details.get("Course Description", None)
+
+            response_data = {
+                "role": "ai",
+                "html": f"<p>This is the course name - <br>{name}<br></p> And here is the summary - <br>{description}",
+            }
+        return [response_data]
+    elif category == "question_generation":
         response_data = {
             "role": "ai",
-            "html": f"<p>Here are the top 3 courses you should look into - <br></p>{final_resp_text}",
+            "text": f"question generation",
         }
-
+        return [response_data]
+    elif category == "general_search":
+        response_data = {
+            "role": "ai",
+            "text": f"general search",
+        }
+        return [response_data]
     else:
         response_data = {
             "role": "ai",
-            "text": f"No courses could be found!",
+            "text": f"{category}",
         }
-
-    app.logger.info(f"Question - {user_message}")
-    app.logger.info(f"Response - {courses}")
-
-    return [response_data]
+        return [response_data]
 
 
 if __name__ == "__main__":
