@@ -75,3 +75,78 @@ def get_course_title(question):
     )
 
     return chat_completion.choices[0].message.content
+
+
+def get_course_summary_from_description(question):
+    client = groq_intialization()
+    chat_completion = client.chat.completions.create(
+        messages=[
+            {
+                "role": "system",
+                "content": """Consider you are an assistant who is presented with a description text for a particular course and your job is to frame that back into a key pointwise format (basically a structured format) to ensure that a small summary kind of is created for the text which is pointwise and thus easy to understand. You have to return the response in a formatted vanilla html format so that it can be directly rendered.
+                Response Guidelines -
+                1. Return the pointwise formatted text in a proper renderable format in html.
+                2. Do not return anything else like an explaination or a predicate etc. Only the html string of the course summary in points.
+                """,
+            },
+            {
+                "role": "user",
+                "content": f"{question}",
+            },
+        ],
+        model="llama3-8b-8192",
+    )
+
+    return chat_completion.choices[0].message.content
+
+
+def general_search(question):
+    client = groq_intialization()
+    chat_completion = client.chat.completions.create(
+        messages=[
+            {
+                "role": "system",
+                "content": """Consider you are a helpful assistant who has the task of simply answering the queries of the user. The question asked could be any generic question related to understanding of terminologies or a meaning.
+                Response Guidelines -
+                1. If you are not aware or sure of the response simply return a polite response that you won't be able to answer the question. Similarly if the question seems inappropriate or insensitive or uncensored then also simply return a polite response stating you can't answer such questions.
+                """,
+            },
+            {
+                "role": "user",
+                "content": f"{question}",
+            },
+        ],
+        model="llama3-8b-8192",
+    )
+
+    return chat_completion.choices[0].message.content
+
+
+def question_generation(course_description):
+    client = groq_intialization()
+    chat_completion = client.chat.completions.create(
+        messages=[
+            {
+                "role": "system",
+                "content": """Consider you are a helpful assistant who has the task of creating a multiple choice question and the corresponding 4 options out of which one has to be the coorect response and others wrong. Now the question that will be created should be picked from one of the topics present in the course description that will be provided. Keep the question of average difficulty only. 
+                Response Guidelines -
+                1. The response format should be a json as follows - 
+                {
+                    "question":"The question generated",
+                    "correct_response":"the correct answer",
+                    "wrong_ans_1":"the wrong option 1",
+                    "wrong_ans_2":"the wrong option 2",
+                    "wrong_ans_3":"the wrong option 3"
+                }
+                2. Do not return anything else like an explaination or a predicate etc. Only the json of the mcq as specified above in the format.
+                """,
+            },
+            {
+                "role": "user",
+                "content": f"Now given the course description  - {course_description}. Generate the mcq in the given format for the course.",
+            },
+        ],
+        model="llama3-8b-8192",
+    )
+
+    return chat_completion.choices[0].message.content

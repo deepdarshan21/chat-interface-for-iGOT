@@ -1,3 +1,4 @@
+import json
 import logging
 from flask import Flask, request
 from flask_cors import CORS
@@ -10,6 +11,9 @@ from utils.groqLoader import (
     groq_chat_intialization,
     question_categorization,
     get_course_title,
+    get_course_summary_from_description,
+    general_search,
+    question_generation,
 )
 
 app = Flask(__name__)
@@ -107,22 +111,54 @@ def chat_response():
             parsed_details = parse_course_details(results[0][0].page_content)
             name = parsed_details.get("Course Name", None)
             description = parsed_details.get("Course Description", None)
+            final_summary = get_course_summary_from_description(description)
 
             response_data = {
                 "role": "ai",
-                "html": f"<p>This is the course name - <br>{name}<br></p> And here is the summary - <br>{description}",
+                "html": f"<p>This is the course name - <br>{name}<br></p> And here is the summary - <br>{final_summary}",
             }
         return [response_data]
     elif category == "question_generation":
-        response_data = {
-            "role": "ai",
-            "text": f"question generation",
-        }
-        return [response_data]
+        collection = chroma_init()
+        course_title = get_course_title(user_message)
+        if course_title == "NA":
+            default_current_course = "Anti-Racism I"
+        else:
+            default_current_course = course_title
+
+        # rag based fetching top 1 course that matches this title and thus getting the summary of that course
+        results = query_documents_local(collection, default_current_course, 1)
+        if len(results) == 0:
+            response_data = {
+                "role": "ai",
+                "text": f"No courses could be found!",
+            }
+        else:
+            parsed_details = parse_course_details(results[0][0].page_content)
+            description = parsed_details.get("Course Description", None)
+            mcq = question_generation(description)
+            formatted_mcq = json.loads(mcq)
+            html_options_string = f"""<div class="deep-chat-temporary-message"><button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 5px">{formatted_mcq["wrong_ans_1"]}</button><button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 6px">{formatted_mcq["wrong_ans_2"]}</button><button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 6px">{formatted_mcq["correct_response"]}</button><button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 6px">{formatted_mcq["wrong_ans_3"]}</button></div>"""
+
+            response_data_1 = {
+                "role": "ai",
+                "html": f"<p><b>{formatted_mcq['question']}</b></p>",
+            }
+
+            response_data_2 = {
+                "role": "ai",
+                "html": f"{html_options_string}",
+            }
+
+            print(response_data_1)
+            print()
+            print(response_data_2)
+        return [response_data_1, response_data_2]
     elif category == "general_search":
+        gen_search = general_search(user_message)
         response_data = {
             "role": "ai",
-            "text": f"general search",
+            "html": f"<p>{gen_search}</p>",
         }
         return [response_data]
     else:

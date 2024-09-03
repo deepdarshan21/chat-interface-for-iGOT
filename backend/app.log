@@ -40,3 +40,5 @@ Question - give some courses related to finance and accounting
 Response - [{'name': 'Accounting: Principles of Financial Accounting', 'url': 'https://www.coursera.org/learn/financial-accounting', 'rating': '4.8'}, {'name': 'Management and financial accounting: Know your numbers 1', 'url': 'https://www.coursera.org/learn/management-accounting', 'rating': '4.7'}, {'name': 'Accounting Analysis II: Accounting for Liabilities and Equity', 'url': 'https://www.coursera.org/learn/accounting-analysis-2-equity', 'rating': '4.6'}]
 Feedback - Yes
 
+Question - question about the python fundamentals course
+Response - [{'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}, {'name': 'Python Programming: A Concise Introduction', 'url': 'https://www.coursera.org/learn/python-programming-introduction', 'rating': '4.6'}, {'name': 'Learn to Program: The Fundamentals', 'url': 'https://www.coursera.org/learn/learn-to-program', 'rating': '4.6'}]

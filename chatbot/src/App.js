@@ -62,7 +62,9 @@ function App() {
       };
 
       chatElementRef.current.responseInterceptor = (a) => {
-        return a[0];
+        chatElementRef.current._addMessage(a[0]);
+        chatElementRef.current._addMessage(a[0]);
+        return;
       };
     }
   }, []);
