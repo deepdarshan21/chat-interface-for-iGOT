@@ -33,19 +33,17 @@ function App() {
       chatElementRef.current.submitButtonStyles = {
         disabled: { container: { default: { opacity: 0, cursor: "auto" } } },
       };
+
       chatElementRef.current.onNewMessage = ({ message, isInitial }) => {
         if (
           !isInitial &&
           message.role === "ai" &&
-          message.text !== "Thanks recorded!"
+          message.text !== "Thanks recorded!" &&
+          message.html.search(/<button/g) !== -1 &&
+          message.html.match(/<button/g).length !== 4
         ) {
           console.log("in ref : ", isInitial, message);
-          // chatElementRef.current.responseInterceptor = (message) => {
-          //   return message;
-          // };
-          // chatElementRef.current.responseInterceptor = () => {
-          //   return { role: "ai", text: "feedback" };
-          // };
+
           chatElementRef.current._addMessage({
             text: "Was the response satisfactory?",
             role: "ai",
@@ -62,9 +60,7 @@ function App() {
       };
 
       chatElementRef.current.responseInterceptor = (a) => {
-        chatElementRef.current._addMessage(a[0]);
-        chatElementRef.current._addMessage(a[0]);
-        return;
+        return a[0];
       };
     }
   }, []);

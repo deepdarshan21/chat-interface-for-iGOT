@@ -138,22 +138,17 @@ def chat_response():
             description = parsed_details.get("Course Description", None)
             mcq = question_generation(description)
             formatted_mcq = json.loads(mcq)
-            html_options_string = f"""<div class="deep-chat-temporary-message"><button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 5px">{formatted_mcq["wrong_ans_1"]}</button><button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 6px">{formatted_mcq["wrong_ans_2"]}</button><button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 6px">{formatted_mcq["correct_response"]}</button><button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 6px">{formatted_mcq["wrong_ans_3"]}</button></div>"""
+            html_options_string = f"""<div class="deep-chat-temporary-message"><button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 5px;background-color: #0084ff; color:#fff">{formatted_mcq["wrong_ans_1"]}</button><button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 6px;background-color: #0084ff; color:#fff">{formatted_mcq["wrong_ans_2"]}</button><button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 6px;background-color: #0084ff; color:#fff">{formatted_mcq["correct_response"]}</button><button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 6px;background-color: #0084ff; color:#fff">{formatted_mcq["wrong_ans_3"]}</button></div>"""
 
             response_data_1 = {
                 "role": "ai",
-                "html": f"<p><b>{formatted_mcq['question']}</b></p>",
-            }
-
-            response_data_2 = {
-                "role": "ai",
-                "html": f"{html_options_string}",
+                "html": f"<p><b>{formatted_mcq['question']}</b></p>{html_options_string}",
+                "type": "question_generation",
             }
 
             print(response_data_1)
             print()
-            print(response_data_2)
-        return [response_data_1, response_data_2]
+        return [response_data_1]
     elif category == "general_search":
         gen_search = general_search(user_message)
         response_data = {

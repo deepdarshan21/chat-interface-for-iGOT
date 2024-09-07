@@ -42,3 +42,11 @@ Feedback - Yes
 
 Question - question about the python fundamentals course
 Response - [{'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}, {'name': 'Python Programming: A Concise Introduction', 'url': 'https://www.coursera.org/learn/python-programming-introduction', 'rating': '4.6'}, {'name': 'Learn to Program: The Fundamentals', 'url': 'https://www.coursera.org/learn/learn-to-program', 'rating': '4.6'}]
+Question - similar courses to python fundamentals
+Response - [{'name': 'Python Classes and Inheritance', 'url': 'https://www.coursera.org/learn/python-classes-inheritance', 'rating': '4.7'}, {'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation', 'rating': '4.7'}]
+Question - similar courses to python fundamentals
+Response - [{'name': 'Python Classes and Inheritance', 'url': 'https://www.coursera.org/learn/python-classes-inheritance', 'rating': '4.7'}, {'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation', 'rating': '4.7'}]
+Question - similar courses to python fundamentals
+Response - [{'name': 'Python Classes and Inheritance', 'url': 'https://www.coursera.org/learn/python-classes-inheritance', 'rating': '4.7'}, {'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation', 'rating': '4.7'}]
+Question - tuple
+Response - [{'name': 'Python Data Structures', 'url': 'https://www.coursera.org/learn/python-data', 'rating': '4.8'}, {'name': 'Capstone: Retrieving, Processing, and Visualizing Data with Python', 'url': 'https://www.coursera.org/learn/python-data-visualization', 'rating': '4.6'}, {'name': 'Siamese Network with Triplet Loss in Keras', 'url': 'https://www.coursera.org/learn/siamese-network-triplet-loss-keras', 'rating': '4.7'}]
