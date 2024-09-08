@@ -30,17 +30,19 @@ function App() {
       //     },
       //   },
       // };
+
       chatElementRef.current.submitButtonStyles = {
         disabled: { container: { default: { opacity: 0, cursor: "auto" } } },
       };
 
       chatElementRef.current.onNewMessage = ({ message, isInitial }) => {
+        
+        const allMessages = chatElementRef.current.getMessages();
         if (
           !isInitial &&
           message.role === "ai" &&
           message.text !== "Thanks recorded!" &&
-          message.html.search(/<button/g) !== -1 &&
-          message.html.match(/<button/g).length !== 4
+          message.html.search(/<button/g) === -1
         ) {
           console.log("in ref : ", isInitial, message);
 
@@ -56,6 +58,16 @@ function App() {
               <button class="deep-chat-button deep-chat-suggestion-button" style="border: 1px solid #d80000">No</button>
             </div>`,
           });
+        }
+
+        if (
+          !isInitial &&
+          allMessages.length !== 0 &&
+          allMessages[allMessages.length - 2].role === "ai" &&
+          allMessages[allMessages.length - 2].html.search(/<button/g) !== -1 &&
+          allMessages[allMessages.length - 2].html.match(/<button/g).length >= 4
+        ) {
+          console.log("ye tha resopnses - ", message.text);
         }
       };
 

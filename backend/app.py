@@ -143,7 +143,6 @@ def chat_response():
             response_data_1 = {
                 "role": "ai",
                 "html": f"<p><b>{formatted_mcq['question']}</b></p>{html_options_string}",
-                "type": "question_generation",
             }
 
             print(response_data_1)
