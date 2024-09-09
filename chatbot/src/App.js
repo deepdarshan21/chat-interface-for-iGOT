@@ -36,12 +36,12 @@ function App() {
       };
 
       chatElementRef.current.onNewMessage = ({ message, isInitial }) => {
-        
         const allMessages = chatElementRef.current.getMessages();
         if (
           !isInitial &&
           message.role === "ai" &&
           message.text !== "Thanks recorded!" &&
+          message.html &&
           message.html.search(/<button/g) === -1
         ) {
           console.log("in ref : ", isInitial, message);
@@ -64,10 +64,26 @@ function App() {
           !isInitial &&
           allMessages.length !== 0 &&
           allMessages[allMessages.length - 2].role === "ai" &&
+          allMessages[allMessages.length - 2].html &&
           allMessages[allMessages.length - 2].html.search(/<button/g) !== -1 &&
           allMessages[allMessages.length - 2].html.match(/<button/g).length >= 4
         ) {
-          console.log("ye tha resopnses - ", message.text);
+          const correctAnsMatch = allMessages[
+            allMessages.length - 2
+          ].html.match(/<button id="correct-ans"[^>]*>(.*?)<\/button>/);
+          if (correctAnsMatch && correctAnsMatch[1]) {
+            if (message.text === correctAnsMatch[1]) {
+              chatElementRef.current._addMessage({
+                text: "Woah! You nailed it!",
+                role: "ai",
+              });
+            } else {
+              chatElementRef.current._addMessage({
+                text: `Uh Oh! the correct answer was - "${correctAnsMatch[1]}"`,
+                role: "ai",
+              });
+            }
+          }
         }
       };
 

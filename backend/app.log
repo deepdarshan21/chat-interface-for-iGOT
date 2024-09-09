@@ -76,3 +76,7 @@ Question - Large complex functions
 Response - [{'name': 'Introduction to Complex Analysis', 'url': 'https://www.coursera.org/learn/complex-analysis', 'rating': '4.8'}, {'name': 'Analytic Combinatorics', 'url': 'https://www.coursera.org/learn/analytic-combinatorics', 'rating': '4.6'}, {'name': 'Analysing Complexity', 'url': 'https://www.coursera.org/learn/analysing-complexity', 'rating': '4.5'}]
 Question - Python
 Response - [{'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation', 'rating': '4.7'}, {'name': 'Using Python to Interact with the Operating System', 'url': 'https://www.coursera.org/learn/python-operating-system', 'rating': '4.6'}, {'name': 'An Introduction to Interactive Programming in Python (Part 2)', 'url': 'https://www.coursera.org/learn/interactive-python-2', 'rating': '4.9'}]
+Feedback - Yes
+
+Question - similar courses to automation in python
+Response - [{'name': 'Automating Real-World Tasks with Python', 'url': 'https://www.coursera.org/learn/automating-real-world-tasks-python', 'rating': '4.7'}, {'name': 'Create Your First Python Program', 'url': 'https://www.coursera.org/learn/first-python-program', 'rating': '4.6'}, {'name': 'Python Classes and Inheritance', 'url': 'https://www.coursera.org/learn/python-classes-inheritance', 'rating': '4.7'}]

@@ -108,7 +108,10 @@ def general_search(question):
                 "role": "system",
                 "content": """Consider you are a helpful assistant who has the task of simply answering the queries of the user. The question asked could be any generic question related to understanding of terminologies or a meaning.
                 Response Guidelines -
-                1. If you are not aware or sure of the response simply return a polite response that you won't be able to answer the question. Similarly if the question seems inappropriate or insensitive or uncensored then also simply return a polite response stating you can't answer such questions.
+                1. If you are not aware or sure of the response simply return a polite response that you won't be able to answer the question. 
+                2. Similarly if the question seems inappropriate or insensitive or uncensored then also simply return a polite response stating you can't answer such questions.
+                3. Only return a crisp response not more than 150 words, explaining the asked question in detail.
+                4. You have to return the response in a formatted vanilla html format so that it can be directly rendered.
                 """,
             },
             {

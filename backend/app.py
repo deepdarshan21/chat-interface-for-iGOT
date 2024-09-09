@@ -38,7 +38,22 @@ def chat_response():
     messages = request_data.get("messages", [])
     user_message = ""
 
+    print("Logging all messages - ", messages[0]["text"])
+
     if (
+        messages
+        and "text" in messages[0]
+        and (
+            messages[0]["text"] == "Woah! You nailed it!"
+            or "Uh Oh! the correct answer was -" in messages[0]["text"]
+        )
+    ):
+        response_data = {
+            "role": "ai",
+            "text": f"Let me know how else can I help?",
+        }
+        return [response_data]
+    elif (
         messages
         and "text" in messages[0]
         and (messages[0]["text"] != "Yes" and messages[0]["text"] != "No")
@@ -138,7 +153,12 @@ def chat_response():
             description = parsed_details.get("Course Description", None)
             mcq = question_generation(description)
             formatted_mcq = json.loads(mcq)
-            html_options_string = f"""<div class="deep-chat-temporary-message"><button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 5px;background-color: #0084ff; color:#fff">{formatted_mcq["wrong_ans_1"]}</button><button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 6px;background-color: #0084ff; color:#fff">{formatted_mcq["wrong_ans_2"]}</button><button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 6px;background-color: #0084ff; color:#fff">{formatted_mcq["correct_response"]}</button><button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 6px;background-color: #0084ff; color:#fff">{formatted_mcq["wrong_ans_3"]}</button></div>"""
+            html_options_string = f"""<div class="deep-chat-temporary-message">
+            <button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 5px; font-size:bold;">{formatted_mcq["wrong_ans_1"]}</button>
+            <button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 6px; font-size:bold;">{formatted_mcq["wrong_ans_2"]}</button>
+            <button id="correct-ans" class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 6px; font-size:bold;">{formatted_mcq["correct_response"]}</button>
+            <button class="deep-chat-button deep-chat-suggestion-button" style="margin-top: 6px; font-size:bold;">{formatted_mcq["wrong_ans_3"]}</button>
+            </div>"""
 
             response_data_1 = {
                 "role": "ai",
@@ -158,7 +178,7 @@ def chat_response():
     else:
         response_data = {
             "role": "ai",
-            "text": f"{category}",
+            "text": f"Could not process the question! Try Again!",
         }
         return [response_data]
 
