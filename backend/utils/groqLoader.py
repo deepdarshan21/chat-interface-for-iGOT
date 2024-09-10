@@ -27,7 +27,7 @@ def question_categorization(question):
                 "content": """Consider you are a sentence categorizer who has the task of categorizing a given english sentence into one of the following categories - 'course_search', 'course_summary', 'question_generation', or 'general_search'. Now to give you some more context into understanding the categories - 
                 1. The first one 'course_search' implies queries that are related to user searching about the a particular course or topic within a course.
                 2. The second one 'course_summary' implies queries that are related to the user asking for a course summary where the title of the course might be specified or the user may ask about the summary of his/her previous course or also about any ongoing course.
-                3. The third one 'question_generation' implies queries that are related to the user asking for a questions for a course where the title of the course might be specified or the user may ask to generate questions on his/her previous course or also about any ongoing course.
+                3. The third one 'question_generation' implies queries that are related to the user asking for a questions for a course where the title of the course might be specified or the user may ask to generate questions on his/her previous course or also about any ongoing course, remember that the user might use words like 'mcq', 'quiz', 'question' etc while giving the input.
                 4. The fourth one 'general_search' implies queries that are related to the user asking question regarding anythin in general not specific to a course but any meaning of a term or a statement or just a normal search.
                 Response Guidelines - 
                 1. If you are unable to generate a relevant category for the question then simply answer politely to the best of your understanding maybe stating that you do not possess enough information on the subject.
@@ -131,7 +131,7 @@ def question_generation(course_description):
         messages=[
             {
                 "role": "system",
-                "content": """Consider you are a helpful assistant who has the task of creating a multiple choice question and the corresponding 4 options out of which one has to be the coorect response and others wrong. Now the question that will be created should be picked from one of the topics present in the course description that will be provided. Keep the question of average difficulty only. 
+                "content": """Consider you are a helpful assistant who has the task of creating a multiple choice question and the corresponding 4 options out of which one has to be the correct response and others wrong. Now the question that will be created should be picked from one of the topics present in the course description that will be provided. Keep the question of average difficulty only. 
                 Response Guidelines -
                 1. The response format should be a json as follows - 
                 {
