@@ -1,0 +1,82 @@
+Question - i want to learn piano and some classical folk as well
+Response - [{'name': "Exploring Beethoven's Piano Sonatas Part 5", 'url': 'https://www.coursera.org/learn/exploring-beethoven-piano-sonatas-5'}, {'name': 'Approaching Music Theory: Melodic Forms and Simple Harmony', 'url': 'https://www.coursera.org/learn/melodic-forms-simple-harmony'}, {'name': "Exploring Beethoven's Piano Sonatas Part 6", 'url': 'https://www.coursera.org/learn/exploring-beethoven-piano-sonatas-6'}]
+Feedback - Yes
+
+Question - looking for courses with some maths
+Response - [{'name': 'Data Science Math Skills', 'url': 'https://www.coursera.org/learn/datasciencemathskills'}, {'name': 'Precalculus: Mathematical Modeling', 'url': 'https://www.coursera.org/learn/precalculus-mathematical-modelling'}, {'name': 'JavaScript Arithmetic Operators', 'url': 'https://www.coursera.org/learn/javascript-arithmetic-operators'}]
+Feedback - No
+
+Question - give some details about course on python data structures
+Response - [{'name': 'Python Data Structures', 'url': 'https://www.coursera.org/learn/python-data'}, {'name': 'Python Data Structures', 'url': 'https://www.coursera.org/learn/python-data-structures'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation'}]
+Feedback - Yes
+
+Question - get courses on advanced data structures
+Response - [{'name': 'Data Structures', 'url': 'https://www.coursera.org/learn/data-structures'}, {'name': 'Unordered Data Structures', 'url': 'https://www.coursera.org/learn/cs-fundamentals-3'}, {'name': 'Advanced Data Structures in Java', 'url': 'https://www.coursera.org/learn/Advanced-data-structures'}]
+Question - can you give some courses regarding learning data structures and python
+Response - [{'name': 'Python Data Structures', 'url': 'https://www.coursera.org/learn/python-data'}, {'name': 'Data Structures', 'url': 'https://www.coursera.org/learn/data-structures'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation'}]
+Feedback - Yes
+
+Question - can you give courses for musicians
+Response - [{'name': 'Developing Your Musicianship: Final Project', 'url': 'https://www.coursera.org/learn/musicianship-final-project'}, {'name': 'Teaching Popular Music in the Classroom', 'url': 'https://www.coursera.org/learn/teaching-popular-music'}, {'name': 'Building Your Career in Music: Developing A Brand and Funding Your Music', 'url': 'https://www.coursera.org/learn/navigate-music-industry-independent-artist'}]
+Feedback - Yes
+
+Question - Can you give some course related details for Java
+Response - [{'name': 'Process Personal Details using Methods in Java', 'url': 'https://www.coursera.org/learn/process-personal-details-using-methods-in-java'}, {'name': 'Build a Guessing Game Application using Java', 'url': 'https://www.coursera.org/learn/build-game-application-using-java'}, {'name': 'Create your first Java project using jGRASP', 'url': 'https://www.coursera.org/learn/create-your-first-java-project-using-jgrasp'}]
+Feedback - No
+
+Question - give some course details regarding python
+Response - [{'name': 'Create Your First Python Program', 'url': 'https://www.coursera.org/learn/first-python-program', 'rating': '4.6'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation', 'rating': '4.7'}, {'name': 'Python Programming: A Concise Introduction', 'url': 'https://www.coursera.org/learn/python-programming-introduction', 'rating': '4.6'}]
+Question - give some course details in python
+Response - [{'name': 'Create Your First Python Program', 'url': 'https://www.coursera.org/learn/first-python-program', 'rating': '4.6'}, {'name': 'Python Programming: A Concise Introduction', 'url': 'https://www.coursera.org/learn/python-programming-introduction', 'rating': '4.6'}, {'name': 'Concepts in Python: Loops, Functions and Returns', 'url': 'https://www.coursera.org/learn/python-loops-functions-returns', 'rating': '4.8'}]
+Question - no
+Response - [{'name': 'Marketing in an Analog World', 'url': 'https://www.coursera.org/learn/marketing-analog', 'rating': '4.7'}, {'name': 'Analyze Box Office Data with Plotly and Python', 'url': 'https://www.coursera.org/learn/analyze-data-plotly-python', 'rating': '4.5'}, {'name': 'Native Advertising', 'url': 'https://www.coursera.org/learn/native-advertising', 'rating': '4.4'}]
+Feedback - No
+
+Question - can you give some courses that teach about python fundamentals
+Response - [{'name': 'Python Basics', 'url': 'https://www.coursera.org/learn/python-basics', 'rating': '4.8'}, {'name': 'Python Classes and Inheritance', 'url': 'https://www.coursera.org/learn/python-classes-inheritance', 'rating': '4.7'}, {'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}]
+Question - This is the course title -
+Response - [{'name': 'Our Earth: Its Climate, History, and Processes', 'url': 'https://www.coursera.org/learn/our-earth', 'rating': '4.7'}, {'name': 'Origins - Formation of the Universe, Solar System, Earth and Life', 'url': 'https://www.coursera.org/learn/origins-universe-solarsystem', 'rating': '4.7'}, {'name': 'How To Teach Us', 'url': 'https://www.coursera.org/learn/how-to-teach-us', 'rating': '4.3'}]
+Question - give some courses related to finance and accounting
+Response - [{'name': 'Accounting: Principles of Financial Accounting', 'url': 'https://www.coursera.org/learn/financial-accounting', 'rating': '4.8'}, {'name': 'Management and financial accounting: Know your numbers 1', 'url': 'https://www.coursera.org/learn/management-accounting', 'rating': '4.7'}, {'name': 'Accounting Analysis II: Accounting for Liabilities and Equity', 'url': 'https://www.coursera.org/learn/accounting-analysis-2-equity', 'rating': '4.6'}]
+Feedback - Yes
+
+Question - question about the python fundamentals course
+Response - [{'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}, {'name': 'Python Programming: A Concise Introduction', 'url': 'https://www.coursera.org/learn/python-programming-introduction', 'rating': '4.6'}, {'name': 'Learn to Program: The Fundamentals', 'url': 'https://www.coursera.org/learn/learn-to-program', 'rating': '4.6'}]
+Question - similar courses to python fundamentals
+Response - [{'name': 'Python Classes and Inheritance', 'url': 'https://www.coursera.org/learn/python-classes-inheritance', 'rating': '4.7'}, {'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation', 'rating': '4.7'}]
+Question - similar courses to python fundamentals
+Response - [{'name': 'Python Classes and Inheritance', 'url': 'https://www.coursera.org/learn/python-classes-inheritance', 'rating': '4.7'}, {'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation', 'rating': '4.7'}]
+Question - similar courses to python fundamentals
+Response - [{'name': 'Python Classes and Inheritance', 'url': 'https://www.coursera.org/learn/python-classes-inheritance', 'rating': '4.7'}, {'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation', 'rating': '4.7'}]
+Question - tuple
+Response - [{'name': 'Python Data Structures', 'url': 'https://www.coursera.org/learn/python-data', 'rating': '4.8'}, {'name': 'Capstone: Retrieving, Processing, and Visualizing Data with Python', 'url': 'https://www.coursera.org/learn/python-data-visualization', 'rating': '4.6'}, {'name': 'Siamese Network with Triplet Loss in Keras', 'url': 'https://www.coursera.org/learn/siamese-network-triplet-loss-keras', 'rating': '4.7'}]
+Question - dictionary
+Response - [{'name': 'Create a Boggle Word Solver using recursion in Python', 'url': 'https://www.coursera.org/learn/boggle-python-recursion', 'rating': '4.2'}, {'name': 'Create a Python Application using PyMongo and MongoDB Database', 'url': 'https://www.coursera.org/learn/python-application-pymango-mongodb-database', 'rating': '4.6'}, {'name': 'Python Functions, Files, and Dictionaries', 'url': 'https://www.coursera.org/learn/python-functions-files-dictionaries', 'rating': '4.8'}]
+Question - looping through data structures
+Response - [{'name': 'Ordered Data Structures', 'url': 'https://www.coursera.org/learn/cs-fundamentals-2', 'rating': '4.7'}, {'name': 'C++ Arrays and Loops', 'url': 'https://www.coursera.org/learn/cpp-arrays-and-loops', 'rating': 'Not Calibrated'}, {'name': 'Python Data Structures', 'url': 'https://www.coursera.org/learn/python-data', 'rating': '4.8'}]
+Question - It is used to define a function
+Response - [{'name': 'Functions, Methods, and Interfaces in Go', 'url': 'https://www.coursera.org/learn/golang-functions-methods', 'rating': '4.6'}, {'name': 'Programming Languages, Part C', 'url': 'https://www.coursera.org/learn/programming-languages-part-c', 'rating': '5'}, {'name': 'Programming Languages, Part B', 'url': 'https://www.coursera.org/learn/programming-languages-part-b', 'rating': '4.9'}]
+Question - similar courses to python fundamentals
+Response - [{'name': 'Python Classes and Inheritance', 'url': 'https://www.coursera.org/learn/python-classes-inheritance', 'rating': '4.7'}, {'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation', 'rating': '4.7'}]
+Question - similar courses to python fundamentals
+Response - [{'name': 'Python Classes and Inheritance', 'url': 'https://www.coursera.org/learn/python-classes-inheritance', 'rating': '4.7'}, {'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation', 'rating': '4.7'}]
+Question - similar courses to python fundamentals
+Response - [{'name': 'Python Classes and Inheritance', 'url': 'https://www.coursera.org/learn/python-classes-inheritance', 'rating': '4.7'}, {'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation', 'rating': '4.7'}]
+Question - similar courses to python fundamentals
+Response - [{'name': 'Python Classes and Inheritance', 'url': 'https://www.coursera.org/learn/python-classes-inheritance', 'rating': '4.7'}, {'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation', 'rating': '4.7'}]
+Question - similar courses to python fundamentals
+Response - [{'name': 'Python Classes and Inheritance', 'url': 'https://www.coursera.org/learn/python-classes-inheritance', 'rating': '4.7'}, {'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation', 'rating': '4.7'}]
+Question - similar courses to python fundamentals
+Response - [{'name': 'Python Classes and Inheritance', 'url': 'https://www.coursera.org/learn/python-classes-inheritance', 'rating': '4.7'}, {'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation', 'rating': '4.7'}]
+Question - similar courses to python fundamentals
+Response - [{'name': 'Python Classes and Inheritance', 'url': 'https://www.coursera.org/learn/python-classes-inheritance', 'rating': '4.7'}, {'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation', 'rating': '4.7'}]
+Question - similar courses to python fundamentals
+Response - [{'name': 'Python Classes and Inheritance', 'url': 'https://www.coursera.org/learn/python-classes-inheritance', 'rating': '4.7'}, {'name': 'Programming for Everybody (Getting Started with Python)', 'url': 'https://www.coursera.org/learn/python', 'rating': '4.8'}, {'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation', 'rating': '4.7'}]
+Question - Large complex functions
+Response - [{'name': 'Introduction to Complex Analysis', 'url': 'https://www.coursera.org/learn/complex-analysis', 'rating': '4.8'}, {'name': 'Analytic Combinatorics', 'url': 'https://www.coursera.org/learn/analytic-combinatorics', 'rating': '4.6'}, {'name': 'Analysing Complexity', 'url': 'https://www.coursera.org/learn/analysing-complexity', 'rating': '4.5'}]
+Question - Python
+Response - [{'name': 'Python Data Representations', 'url': 'https://www.coursera.org/learn/python-representation', 'rating': '4.7'}, {'name': 'Using Python to Interact with the Operating System', 'url': 'https://www.coursera.org/learn/python-operating-system', 'rating': '4.6'}, {'name': 'An Introduction to Interactive Programming in Python (Part 2)', 'url': 'https://www.coursera.org/learn/interactive-python-2', 'rating': '4.9'}]
+Feedback - Yes
+
+Question - similar courses to automation in python
+Response - [{'name': 'Automating Real-World Tasks with Python', 'url': 'https://www.coursera.org/learn/automating-real-world-tasks-python', 'rating': '4.7'}, {'name': 'Create Your First Python Program', 'url': 'https://www.coursera.org/learn/first-python-program', 'rating': '4.6'}, {'name': 'Python Classes and Inheritance', 'url': 'https://www.coursera.org/learn/python-classes-inheritance', 'rating': '4.7'}]
