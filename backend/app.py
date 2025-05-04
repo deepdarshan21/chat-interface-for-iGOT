@@ -1,6 +1,6 @@
 import json
 import logging
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 from utils.chromaQueryDocuments import (
     parse_course_details,
@@ -33,6 +33,11 @@ def health():
 @app.route("/api/chat", methods=["POST"])
 def chat_response():
     request_data = request.get_json()
+    user_message = request_data.get("messages", [{}])[0].get("text", "")
+
+    if user_message in ["Yes", "No"]:
+        app.logger.info(f"Feedback received: {user_message}")
+        return jsonify({"role": "ai", "text": "Thanks for your feedback!"}), 200
 
     # Extract the user message
     messages = request_data.get("messages", [])
