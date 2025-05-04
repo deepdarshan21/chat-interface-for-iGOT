@@ -36,16 +36,7 @@ function App() {
       };
 
       chatElementRef.current.onNewMessage = ({ message, isInitial }) => {
-        const allMessages = chatElementRef.current.getMessages();
-        if (
-          !isInitial &&
-          message.role === "ai" &&
-          message.text !== "Thanks recorded!" &&
-          message.html &&
-          message.html.search(/<button/g) === -1
-        ) {
-          console.log("in ref : ", isInitial, message);
-
+        if (!isInitial && message.role === "ai") {
           chatElementRef.current._addMessage({
             text: "Was the response satisfactory?",
             role: "ai",
@@ -53,13 +44,15 @@ function App() {
           chatElementRef.current._addMessage({
             role: "user",
             html: `
-            <div class="deep-chat-temporary-message">
-              <button class="deep-chat-button deep-chat-suggestion-button" style="border: 1px solid green">Yes</button>
-              <button class="deep-chat-button deep-chat-suggestion-button" style="border: 1px solid #d80000">No</button>
-            </div>`,
+              <div>
+                <button class="feedback-button" style="border: 1px solid green">Yes</button>
+                <button class="feedback-button" style="border: 1px solid red">No</button>
+              </div>
+            `,
           });
         }
 
+        const allMessages = chatElementRef.current.getMessages();
         if (
           !isInitial &&
           allMessages.length !== 0 &&
@@ -96,6 +89,14 @@ function App() {
     <div className="App" style={{ position: "relative", height: "100vh" }}>
       <DeepChat
         ref={chatElementRef}
+        request={{
+          url: "http://127.0.0.1:5000/api/chat", // Backend API endpoint
+          method: "POST",
+        }}
+        textInput={{ placeholder: { text: "Ask me anything..." } }}
+        initialMessages={[
+          { role: "ai", text: "Hi! How can I assist you today?" },
+        ]}
         style={{
           visibility: showChat ? "visible" : "hidden",
           position: "absolute",
@@ -106,16 +107,10 @@ function App() {
           borderRadius: "10px",
           zIndex: 1, // Ensure it's above other content
         }}
-        request={{
-          url: "http://127.0.0.1:5000/api/chat",
-          method: "POST",
-        }}
         // textToSpeech="true"
         speechToText={{
           webSpeech: true,
-          translations: { hello: "goodbye", Hello: "Goodbye" },
-          commands: { resume: "resume", settings: { commandMode: "hello" } },
-          button: { position: "outside-left" },
+          language: "en-IN", // Change to "hi-IN" for Hindi
         }}
         textInput={{ placeholder: { text: "Welcome to the demo!" } }}
         initialMessages={initialMessages}
